@@ -6,6 +6,7 @@ void pheptoan(){
 	char phepToan;
 	cout << "Nhap 2 so nguyen: ";
 	cin >> a >> b;
+	char ch;
 	cout << "Tinh gi? (+,-,*,/) ";
 	cin >> ch;
 	
@@ -21,8 +22,8 @@ void pheptoan(){
 		cout << "Tong la" << a*b << endl;
 		break;
 	case '/':
-		if (b==0)
-			cout<<"Ko chia cho 0 dc"
+		if (b == 0)
+			cout << "Ko chia cho 0 dc";
 		else cout<<"a/b ="<<a/b;
 		break;
 		
@@ -37,8 +38,8 @@ void tinhChuViDienTich(){
 
 	cout << "-----------------------------------------------";
 	cout << "1. Hinh vuong";
-	cout << "1. Hinh chu nhat";
-	cout << "1. Hinh tron";
+	cout << "2. Hinh chu nhat";
+	cout << "3. Hinh tron";
 	cout << "-----------------------------------------------";
 
 	cout << "Tinh CV va DT hinh gi? ";
@@ -96,7 +97,7 @@ int a=1 + rand() % 100;
 int b=1 + rand() % 100;
 int c;
 cout <<a<<" + "<<b<<" : ";
-cin<c;
+cin>>c;
 if(c==a+b){
 	cout <<"Dung";
 }
@@ -104,29 +105,45 @@ else{
 cout <<"Sai";
 }
 }
+void random_Tru() {
+	int a = 1 + rand() % 100;
+	int b = 1 + rand() % 100;
+	int c;
+	cout << a << " - " << b << " : ";
+	cin >> c;
+	if (c == a - b) {
+		cout << "Dung";
+	}
+	else {
+		cout << "Sai";
+	}
+}
 
 void main()
 {
 	int chon;
 
-	cout<"1.PHEP TOAN";
-	cout<"2.TINH CV DT";
-	cout<"3.TINH RANDOMCONG";
+	cout<<"1.PHEP TOAN";
+	cout<<"2.TINH CV DT";
+	cout<<"3.TINH RANDOMCONG";
+	cout << "4. TINH RANDOM TRU";
 	cin >> chon;
 	
 	switch (chon)
 	{
 	
 	case 1:
-		pheptinh()
+		pheptoan();
 		break;
 	case 2:
-		tinhChuViDienTich()
+		tinhChuViDienTich();
 		break;
 	case 3:
 		randomCong();
 		break;
-	
+	case 4:
+		random_Tru();
+		break;
 	default:
 		cout << "Chon sai phep toan";
 		break;
