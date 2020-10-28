@@ -91,14 +91,27 @@ void tinh_CV_DT_HT(int c){
 	cout <<"Chu vi hinh tron la : " << (float)(2*3.14*c) << endl;
 	cout <<"Dien tich hinh tron la : " << (float)(3.14*c*c) << endl;
 }
+void randomCong(){
+int a=1 + rand() % 100;
+int b=1 + rand() % 100;
+int c;
+cout <<a<<" + "<<b<<" : ";
+cin<c;
+if(c==a+b){
+	cout <<"Dung";
+}
+else{
+cout <<"Sai";
+}
+}
 
 void main()
 {
 	int chon;
 
 	cout<"1.PHEP TOAN";
-	cin >> chon;
-	cout<"2.TINH CV & DT";
+	cout<"2.TINH CV DT";
+	cout<"3.TINH RANDOMCONG";
 	cin >> chon;
 	
 	switch (chon)
@@ -109,6 +122,9 @@ void main()
 		break;
 	case 2:
 		tinhChuViDienTich()
+		break;
+	case 3:
+		randomCong();
 		break;
 	
 	default:
